@@ -1,0 +1,1291 @@
+{
+  "schemaVersion": 1,
+  "id": "t2_a",
+  "tier": 2,
+  "name": "Operations Network A",
+  "cellSizeM": 2.0,
+  "notes": [
+    "Tier 2: mixed solo/paired ambient patrols, carts, MFA doors, hardened gates, and a second zero-day in the hub ($).",
+    "Three long horizontal lanes. Route A has a conveyor (A2), a loop, an MFA/keypad/hardened gate (A3) and a service/paired hazard (A4).",
+    "Route B has a cart ride (B2), an MFA/hardened gate (B3) and a service/paired hazard (B4). Route C has a conveyor (C2), a gate (C3) and a hazard (C4).",
+    "A3, B3 and C3 accept the carried T1_MAINT permission as an optional shortcut. Service robots grant T2_OPS, which carries into tier 3.",
+    "Exit trigger is cell [49,11]; one fixed camera in the exit room at [50,9]."
+  ],
+  "grid": [
+    "####################################################",
+    "########################........####################",
+    "###.#.################.#.######.########.###########",
+    "##...............................................###",
+    "#..########.###.##########.#.#.########.#.###.##.###",
+    "##.########.################.################.##.###",
+    "##.########.###########...###################.##.###",
+    "##.#######...##########...######################.###",
+    "##.#######...##########...######################.###",
+    "#...######...###########.######################....#",
+    "#...###.################.####.#########.#######....#",
+    "#.S..............................................X.#",
+    "#...####.#########.####.###.##.#######.#####.##....#",
+    "#...##########################.#############.##....#",
+    "##.##########################...############.###.###",
+    "##.##########################...################.###",
+    "##.#########...##############...################.###",
+    "##.#########...#################################.###",
+    "##.#########...##############################.##.###",
+    "##..#########.###############################.##.###",
+    "##.###.######.#########.#.#.##########.######.##.###",
+    "##...............................................###",
+    "###.######################.#########.##.############",
+    "##########################.#########################",
+    "####################################################",
+    "####################################################"
+  ],
+  "start": [2, 11],
+  "exit": {
+    "cell": [49, 11],
+    "zoneId": "exit_room"
+  },
+  "rewardPickup": {
+    "cell": [3, 9],
+    "kind": "zero_day"
+  },
+  "zones": [
+    {
+      "id": "hub",
+      "rect": [1, 9, 3, 5],
+      "routeId": "shared",
+      "tags": ["entry"]
+    },
+    {
+      "id": "exit_room",
+      "rect": [47, 9, 4, 5],
+      "routeId": "shared",
+      "tags": []
+    },
+    {
+      "id": "A_0",
+      "rect": [2, 3, 1, 6],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_1",
+      "rect": [3, 3, 5, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_2",
+      "rect": [8, 3, 10, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_3",
+      "rect": [18, 3, 6, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_4",
+      "rect": [24, 3, 8, 1],
+      "routeId": "A",
+      "tags": ["loop"]
+    },
+    {
+      "id": "A_5",
+      "rect": [32, 3, 5, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_6",
+      "rect": [37, 3, 7, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_7",
+      "rect": [44, 3, 5, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "A_8",
+      "rect": [48, 4, 1, 5],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "B_0",
+      "rect": [4, 11, 8, 1],
+      "routeId": "B",
+      "tags": []
+    },
+    {
+      "id": "B_1",
+      "rect": [12, 11, 9, 1],
+      "routeId": "B",
+      "tags": []
+    },
+    {
+      "id": "B_2",
+      "rect": [21, 11, 14, 1],
+      "routeId": "B",
+      "tags": []
+    },
+    {
+      "id": "B_3",
+      "rect": [35, 11, 8, 1],
+      "routeId": "B",
+      "tags": []
+    },
+    {
+      "id": "B_4",
+      "rect": [43, 11, 4, 1],
+      "routeId": "B",
+      "tags": []
+    },
+    {
+      "id": "C_0",
+      "rect": [2, 14, 1, 8],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "C_1",
+      "rect": [3, 21, 6, 1],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "C_2",
+      "rect": [9, 21, 11, 1],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "C_3",
+      "rect": [20, 21, 13, 1],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "C_4",
+      "rect": [33, 21, 9, 1],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "C_5",
+      "rect": [42, 21, 7, 1],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "C_6",
+      "rect": [48, 14, 1, 7],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "LA_w",
+      "rect": [24, 2, 1, 1],
+      "routeId": "A",
+      "tags": ["loop"]
+    },
+    {
+      "id": "LA_n",
+      "rect": [24, 1, 8, 1],
+      "routeId": "A",
+      "tags": ["loop"]
+    },
+    {
+      "id": "LA_e",
+      "rect": [31, 2, 1, 1],
+      "routeId": "A",
+      "tags": ["loop"]
+    },
+    {
+      "id": "DA1_corr",
+      "rect": [11, 4, 1, 3],
+      "routeId": "A",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DA1_room",
+      "rect": [10, 7, 3, 3],
+      "routeId": "A",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DA2_corr",
+      "rect": [28, 4, 1, 2],
+      "routeId": "A",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DA3_corr",
+      "rect": [45, 4, 1, 3],
+      "routeId": "A",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DB1_corr",
+      "rect": [24, 9, 1, 2],
+      "routeId": "B",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DB1_room",
+      "rect": [23, 6, 3, 3],
+      "routeId": "B",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DB2_corr",
+      "rect": [30, 12, 1, 2],
+      "routeId": "B",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DB2_room",
+      "rect": [29, 14, 3, 3],
+      "routeId": "B",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DB3_corr",
+      "rect": [44, 12, 1, 3],
+      "routeId": "B",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DC1_corr",
+      "rect": [13, 19, 1, 2],
+      "routeId": "C",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DC1_room",
+      "rect": [12, 16, 3, 3],
+      "routeId": "C",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DC2_corr",
+      "rect": [26, 22, 1, 2],
+      "routeId": "C",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "DC3_corr",
+      "rect": [45, 18, 1, 3],
+      "routeId": "C",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "A_SP1",
+      "rect": [1, 4, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "A_TOK1",
+      "rect": [3, 2, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_A1",
+      "rect": [5, 2, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_A2",
+      "rect": [15, 4, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "A_SP3",
+      "rect": [22, 2, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "A_TOK3",
+      "rect": [26, 4, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "A_MT3",
+      "rect": [30, 4, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_A4",
+      "rect": [41, 4, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_A4_a",
+      "rect": [39, 4, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_A4_b",
+      "rect": [40, 2, 1, 1],
+      "routeId": "A",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "B_SP1",
+      "rect": [7, 10, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "B_TOK1",
+      "rect": [8, 12, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_B2",
+      "rect": [18, 12, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "B_SP3",
+      "rect": [23, 12, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "B_TOK3",
+      "rect": [27, 12, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "B_MT3",
+      "rect": [29, 10, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_B4_a",
+      "rect": [38, 12, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_B4_b",
+      "rect": [39, 10, 1, 1],
+      "routeId": "B",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "C_SP1",
+      "rect": [3, 19, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "C_TOK1",
+      "rect": [3, 22, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_C1",
+      "rect": [6, 20, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "C_SP3",
+      "rect": [23, 20, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "C_TOK3",
+      "rect": [25, 20, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "C_MT3",
+      "rect": [27, 20, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_C4",
+      "rect": [39, 22, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_C4_a",
+      "rect": [36, 22, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "al_C4_b",
+      "rect": [38, 20, 1, 1],
+      "routeId": "C",
+      "tags": ["alcove"]
+    }
+  ],
+  "routes": [
+    {
+      "id": "A",
+      "name": "Top lane (conveyor + loop)",
+      "slotOrder": ["A1", "A2", "A3", "A4"]
+    },
+    {
+      "id": "B",
+      "name": "Middle lane (cart ride)",
+      "slotOrder": ["B1", "B2", "B3", "B4"]
+    },
+    {
+      "id": "C",
+      "name": "Bottom lane (conveyor + gate)",
+      "slotOrder": ["C1", "C2", "C3", "C4"]
+    }
+  ],
+  "slots": [
+    {
+      "id": "A1",
+      "routeId": "A",
+      "order": 1,
+      "cell": [7, 3],
+      "facing": "E",
+      "mandatory": true,
+      "allowedTypes": ["loose_panel", "keypad_door", "inspection_gap", "camera_corridor"],
+      "crossLengthM": 2.0,
+      "coverZoneIds": ["al_A1"]
+    },
+    {
+      "id": "A2",
+      "routeId": "A",
+      "order": 2,
+      "cell": [17, 3],
+      "facing": "E",
+      "mandatory": false,
+      "allowedTypes": ["conveyor", "camera_corridor", "inspection_gap"],
+      "crossLengthM": 2.0,
+      "conveyorRef": "conv_A2",
+      "barrierCells": [[16, 3], [17, 3], [18, 3]],
+      "coverZoneIds": ["al_A2"]
+    },
+    {
+      "id": "A3",
+      "routeId": "A",
+      "order": 3,
+      "cell": [36, 3],
+      "facing": "E",
+      "mandatory": true,
+      "allowedTypes": ["mfa_door", "keypad_door", "hardened_gate", "loose_panel"],
+      "acceptsTags": ["T1_MAINT"]
+    },
+    {
+      "id": "A4",
+      "routeId": "A",
+      "order": 4,
+      "cell": [43, 3],
+      "facing": "E",
+      "mandatory": false,
+      "allowedTypes": ["service_door", "paired_patrol", "camera_corridor"],
+      "patrolRef": "P_A4",
+      "coverZoneIds": ["al_A4", "al_A4_a", "al_A4_b"]
+    },
+    {
+      "id": "B1",
+      "routeId": "B",
+      "order": 1,
+      "cell": [11, 11],
+      "facing": "E",
+      "mandatory": true,
+      "allowedTypes": ["loose_panel", "keypad_door", "inspection_gap"],
+      "crossLengthM": 2.0
+    },
+    {
+      "id": "B2",
+      "routeId": "B",
+      "order": 2,
+      "cell": [20, 11],
+      "facing": "E",
+      "mandatory": false,
+      "allowedTypes": ["cart_checkpoint", "camera_corridor"],
+      "cartRef": "cart_B2",
+      "barrierCells": [[20, 11]],
+      "coverZoneIds": ["al_B2"]
+    },
+    {
+      "id": "B3",
+      "routeId": "B",
+      "order": 3,
+      "cell": [34, 11],
+      "facing": "E",
+      "mandatory": true,
+      "allowedTypes": ["mfa_door", "hardened_gate", "keypad_door", "inspection_gap"],
+      "crossLengthM": 2.0,
+      "acceptsTags": ["T1_MAINT"]
+    },
+    {
+      "id": "B4",
+      "routeId": "B",
+      "order": 4,
+      "cell": [42, 11],
+      "facing": "E",
+      "mandatory": false,
+      "allowedTypes": ["service_door", "paired_patrol"],
+      "patrolRef": "P_B4",
+      "coverZoneIds": ["al_B4_a", "al_B4_b"]
+    },
+    {
+      "id": "C1",
+      "routeId": "C",
+      "order": 1,
+      "cell": [8, 21],
+      "facing": "E",
+      "mandatory": true,
+      "allowedTypes": ["camera_corridor", "keypad_door", "loose_panel"],
+      "coverZoneIds": ["al_C1"]
+    },
+    {
+      "id": "C2",
+      "routeId": "C",
+      "order": 2,
+      "cell": [19, 21],
+      "facing": "E",
+      "mandatory": false,
+      "allowedTypes": ["conveyor", "inspection_gap"],
+      "crossLengthM": 2.0,
+      "conveyorRef": "conv_C2",
+      "barrierCells": [[18, 21], [19, 21], [20, 21]]
+    },
+    {
+      "id": "C3",
+      "routeId": "C",
+      "order": 3,
+      "cell": [32, 21],
+      "facing": "E",
+      "mandatory": true,
+      "allowedTypes": ["hardened_gate", "mfa_door", "keypad_door", "loose_panel"],
+      "acceptsTags": ["T1_MAINT"]
+    },
+    {
+      "id": "C4",
+      "routeId": "C",
+      "order": 4,
+      "cell": [41, 21],
+      "facing": "E",
+      "mandatory": false,
+      "allowedTypes": ["paired_patrol", "service_door", "camera_corridor"],
+      "patrolRef": "P_C4",
+      "coverZoneIds": ["al_C4", "al_C4_a", "al_C4_b"]
+    }
+  ],
+  "supplyPoints": [
+    {
+      "id": "A_SP1",
+      "routeId": "A",
+      "order": 0,
+      "cell": [1, 4],
+      "accepts": ["code_note"]
+    },
+    {
+      "id": "A_TOK1",
+      "routeId": "A",
+      "order": 0,
+      "cell": [3, 2],
+      "accepts": ["token"],
+      "reservedForSlotId": "A1"
+    },
+    {
+      "id": "A_SP3",
+      "routeId": "A",
+      "order": 2,
+      "cell": [22, 2],
+      "accepts": ["code_note"]
+    },
+    {
+      "id": "A_TOK3",
+      "routeId": "A",
+      "order": 2,
+      "cell": [26, 4],
+      "accepts": ["token"],
+      "reservedForSlotId": "A3"
+    },
+    {
+      "id": "A_MT3",
+      "routeId": "A",
+      "order": 2,
+      "cell": [30, 4],
+      "accepts": ["token"]
+    },
+    {
+      "id": "B_SP1",
+      "routeId": "B",
+      "order": 0,
+      "cell": [7, 10],
+      "accepts": ["code_note"]
+    },
+    {
+      "id": "B_TOK1",
+      "routeId": "B",
+      "order": 0,
+      "cell": [8, 12],
+      "accepts": ["token"],
+      "reservedForSlotId": "B1"
+    },
+    {
+      "id": "B_SP3",
+      "routeId": "B",
+      "order": 2,
+      "cell": [23, 12],
+      "accepts": ["code_note"]
+    },
+    {
+      "id": "B_TOK3",
+      "routeId": "B",
+      "order": 2,
+      "cell": [27, 12],
+      "accepts": ["token"],
+      "reservedForSlotId": "B3"
+    },
+    {
+      "id": "B_MT3",
+      "routeId": "B",
+      "order": 2,
+      "cell": [29, 10],
+      "accepts": ["token"]
+    },
+    {
+      "id": "C_SP1",
+      "routeId": "C",
+      "order": 0,
+      "cell": [3, 19],
+      "accepts": ["code_note"]
+    },
+    {
+      "id": "C_TOK1",
+      "routeId": "C",
+      "order": 0,
+      "cell": [3, 22],
+      "accepts": ["token"],
+      "reservedForSlotId": "C1"
+    },
+    {
+      "id": "C_SP3",
+      "routeId": "C",
+      "order": 2,
+      "cell": [23, 20],
+      "accepts": ["code_note"]
+    },
+    {
+      "id": "C_TOK3",
+      "routeId": "C",
+      "order": 2,
+      "cell": [25, 20],
+      "accepts": ["token"],
+      "reservedForSlotId": "C3"
+    },
+    {
+      "id": "C_MT3",
+      "routeId": "C",
+      "order": 2,
+      "cell": [27, 20],
+      "accepts": ["token"]
+    }
+  ],
+  "patrols": [
+    {
+      "id": "P_A4",
+      "routeId": "A",
+      "slotless": false,
+      "mode": "pingpong",
+      "waypoints": [[38, 3], [41, 3]],
+      "grantsTags": ["T2_OPS"],
+      "grantsDoorSlotIds": ["A4"]
+    },
+    {
+      "id": "P_A_loop",
+      "routeId": "A",
+      "slotless": true,
+      "mode": "cycle",
+      "waypoints": [[24, 3], [24, 1], [31, 1], [31, 3]],
+      "grantsTags": ["T2_OPS"],
+      "grantsDoorSlotIds": []
+    },
+    {
+      "id": "P_B4",
+      "routeId": "B",
+      "slotless": false,
+      "mode": "pingpong",
+      "waypoints": [[37, 11], [40, 11]],
+      "grantsTags": ["T2_OPS"],
+      "grantsDoorSlotIds": ["B4"]
+    },
+    {
+      "id": "P_B_amb",
+      "routeId": "B",
+      "slotless": true,
+      "mode": "pingpong",
+      "waypoints": [[28, 11], [31, 11]],
+      "grantsTags": ["T2_OPS"],
+      "grantsDoorSlotIds": []
+    },
+    {
+      "id": "P_C4",
+      "routeId": "C",
+      "slotless": false,
+      "mode": "pingpong",
+      "waypoints": [[35, 21], [39, 21]],
+      "grantsTags": ["T2_OPS"],
+      "grantsDoorSlotIds": ["C4"]
+    },
+    {
+      "id": "P_C_amb",
+      "routeId": "C",
+      "slotless": true,
+      "mode": "pingpong",
+      "waypoints": [[25, 21], [29, 21]],
+      "grantsTags": ["T2_OPS"],
+      "grantsDoorSlotIds": []
+    }
+  ],
+  "conveyors": [
+    {
+      "id": "conv_A2",
+      "slotId": "A2",
+      "closedLoop": true,
+      "housing": true,
+      "path": [
+        [13, 3],
+        [14, 3],
+        [15, 3],
+        [16, 3],
+        [17, 3],
+        [18, 3],
+        [19, 3],
+        [20, 3],
+        [21, 3],
+        [21, 2],
+        [21, 1],
+        [20, 1],
+        [19, 1],
+        [18, 1],
+        [17, 1],
+        [16, 1],
+        [15, 1],
+        [14, 1],
+        [13, 1],
+        [13, 2]
+      ],
+      "platforms": [
+        {
+          "id": "plat_A2_W",
+          "cells": [[13, 3], [14, 3], [15, 3]]
+        },
+        {
+          "id": "plat_A2_E",
+          "cells": [[19, 3], [20, 3], [21, 3]]
+        }
+      ]
+    },
+    {
+      "id": "conv_C2",
+      "slotId": "C2",
+      "closedLoop": true,
+      "housing": true,
+      "path": [
+        [15, 21],
+        [16, 21],
+        [17, 21],
+        [18, 21],
+        [19, 21],
+        [20, 21],
+        [21, 21],
+        [22, 21],
+        [23, 21],
+        [23, 22],
+        [23, 23],
+        [22, 23],
+        [21, 23],
+        [20, 23],
+        [19, 23],
+        [18, 23],
+        [17, 23],
+        [16, 23],
+        [15, 23],
+        [15, 22]
+      ],
+      "platforms": [
+        {
+          "id": "plat_C2_W",
+          "cells": [[15, 21], [16, 21], [17, 21]]
+        },
+        {
+          "id": "plat_C2_E",
+          "cells": [[21, 21], [22, 21], [23, 21]]
+        }
+      ]
+    }
+  ],
+  "carts": [
+    {
+      "id": "cart_B2",
+      "slotId": "B2",
+      "routeId": "B",
+      "sessionTag": "SVC_B2",
+      "startCell": [14, 11],
+      "path": [
+        [14, 11],
+        [15, 11],
+        [16, 11],
+        [17, 11],
+        [18, 11],
+        [19, 11],
+        [20, 11],
+        [21, 11],
+        [22, 11],
+        [23, 11],
+        [24, 11],
+        [25, 11],
+        [26, 11]
+      ]
+    }
+  ],
+  "decoyBranches": [
+    {
+      "id": "DA1",
+      "routeHint": "A",
+      "zoneIds": ["DA1_corr", "DA1_room"],
+      "allowedTypes": ["dead_end", "honeypot_door", "honeypot_terminal"],
+      "doorCell": [11, 4],
+      "responderPathFrom": [11, 3],
+      "terminalCell": [11, 8]
+    },
+    {
+      "id": "DA2",
+      "routeHint": "A",
+      "zoneIds": ["DA2_corr"],
+      "allowedTypes": ["dead_end", "honeypot_door"],
+      "doorCell": [28, 4],
+      "responderPathFrom": [28, 3]
+    },
+    {
+      "id": "DA3",
+      "routeHint": "A",
+      "zoneIds": ["DA3_corr"],
+      "allowedTypes": ["dead_end", "honeypot_door"],
+      "doorCell": [45, 4],
+      "responderPathFrom": [45, 3]
+    },
+    {
+      "id": "DB1",
+      "routeHint": "B",
+      "zoneIds": ["DB1_corr", "DB1_room"],
+      "allowedTypes": ["dead_end", "honeypot_door", "honeypot_terminal"],
+      "doorCell": [24, 10],
+      "responderPathFrom": [24, 11],
+      "terminalCell": [24, 7]
+    },
+    {
+      "id": "DB2",
+      "routeHint": "B",
+      "zoneIds": ["DB2_corr", "DB2_room"],
+      "allowedTypes": ["dead_end", "honeypot_door", "honeypot_terminal"],
+      "doorCell": [30, 12],
+      "responderPathFrom": [30, 11],
+      "terminalCell": [30, 15]
+    },
+    {
+      "id": "DB3",
+      "routeHint": "B",
+      "zoneIds": ["DB3_corr"],
+      "allowedTypes": ["dead_end", "honeypot_door"],
+      "doorCell": [44, 12],
+      "responderPathFrom": [44, 11]
+    },
+    {
+      "id": "DC1",
+      "routeHint": "C",
+      "zoneIds": ["DC1_corr", "DC1_room"],
+      "allowedTypes": ["dead_end", "honeypot_door", "honeypot_terminal"],
+      "doorCell": [13, 20],
+      "responderPathFrom": [13, 21],
+      "terminalCell": [13, 17]
+    },
+    {
+      "id": "DC2",
+      "routeHint": "C",
+      "zoneIds": ["DC2_corr"],
+      "allowedTypes": ["dead_end", "honeypot_door"],
+      "doorCell": [26, 22],
+      "responderPathFrom": [26, 21]
+    },
+    {
+      "id": "DC3",
+      "routeHint": "C",
+      "zoneIds": ["DC3_corr"],
+      "allowedTypes": ["dead_end", "honeypot_door"],
+      "doorCell": [45, 20],
+      "responderPathFrom": [45, 21]
+    }
+  ],
+  "sensors": [
+    {
+      "id": "cam_exit",
+      "kind": "camera",
+      "routeId": "shared",
+      "cell": [50, 9],
+      "facing": "W",
+      "zoneId": "exit_room"
+    }
+  ],
+  "sockets": [
+    {
+      "id": "SOCK_A1",
+      "routeId": "A",
+      "zoneId": "A_1",
+      "cell": [7, 3],
+      "targetSlotId": "A1",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "CLOSE_GAP",
+        "PATCH_OPENING",
+        "REINFORCE_PANEL",
+        "RESTRICT_CONNECTION",
+        "STRENGTHEN_AUTH"
+      ],
+      "reservedTokenSupplyId": "A_TOK1"
+    },
+    {
+      "id": "SOCK_A2",
+      "routeId": "A",
+      "zoneId": "A_2",
+      "cell": [17, 3],
+      "targetSlotId": "A2",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "CLOSE_GAP",
+        "INSPECT_CONVEYOR",
+        "PATCH_OPENING",
+        "RESTRICT_CONNECTION"
+      ]
+    },
+    {
+      "id": "SOCK_A3",
+      "routeId": "A",
+      "zoneId": "A_5",
+      "cell": [36, 3],
+      "targetSlotId": "A3",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "PATCH_OPENING",
+        "REINFORCE_PANEL",
+        "RESTRICT_CONNECTION",
+        "STRENGTHEN_AUTH"
+      ],
+      "reservedTokenSupplyId": "A_TOK3"
+    },
+    {
+      "id": "SOCK_A4",
+      "routeId": "A",
+      "zoneId": "A_6",
+      "cell": [43, 3],
+      "targetSlotId": "A4",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "PAIR_ROBOT",
+        "PATCH_OPENING",
+        "RESTRICT_CONNECTION",
+        "RESTRICT_ROBOT_PERMISSIONS"
+      ]
+    },
+    {
+      "id": "SOCK_B1",
+      "routeId": "B",
+      "zoneId": "B_0",
+      "cell": [11, 11],
+      "targetSlotId": "B1",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "CLOSE_GAP",
+        "PATCH_OPENING",
+        "REINFORCE_PANEL",
+        "RESTRICT_CONNECTION",
+        "STRENGTHEN_AUTH"
+      ],
+      "reservedTokenSupplyId": "B_TOK1"
+    },
+    {
+      "id": "SOCK_B2",
+      "routeId": "B",
+      "zoneId": "B_1",
+      "cell": [20, 11],
+      "targetSlotId": "B2",
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR", "PATCH_OPENING", "RESTRICT_CONNECTION", "REVOKE_CART_SESSION"]
+    },
+    {
+      "id": "SOCK_B3",
+      "routeId": "B",
+      "zoneId": "B_2",
+      "cell": [34, 11],
+      "targetSlotId": "B3",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "CLOSE_GAP",
+        "PATCH_OPENING",
+        "RESTRICT_CONNECTION",
+        "STRENGTHEN_AUTH"
+      ],
+      "reservedTokenSupplyId": "B_TOK3"
+    },
+    {
+      "id": "SOCK_B4",
+      "routeId": "B",
+      "zoneId": "B_3",
+      "cell": [42, 11],
+      "targetSlotId": "B4",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "PAIR_ROBOT",
+        "PATCH_OPENING",
+        "RESTRICT_CONNECTION",
+        "RESTRICT_ROBOT_PERMISSIONS"
+      ]
+    },
+    {
+      "id": "SOCK_C1",
+      "routeId": "C",
+      "zoneId": "C_1",
+      "cell": [8, 21],
+      "targetSlotId": "C1",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "PATCH_OPENING",
+        "REINFORCE_PANEL",
+        "RESTRICT_CONNECTION",
+        "STRENGTHEN_AUTH"
+      ],
+      "reservedTokenSupplyId": "C_TOK1"
+    },
+    {
+      "id": "SOCK_C2",
+      "routeId": "C",
+      "zoneId": "C_2",
+      "cell": [19, 21],
+      "targetSlotId": "C2",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "CLOSE_GAP",
+        "INSPECT_CONVEYOR",
+        "PATCH_OPENING",
+        "RESTRICT_CONNECTION"
+      ]
+    },
+    {
+      "id": "SOCK_C3",
+      "routeId": "C",
+      "zoneId": "C_3",
+      "cell": [32, 21],
+      "targetSlotId": "C3",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "PATCH_OPENING",
+        "REINFORCE_PANEL",
+        "RESTRICT_CONNECTION",
+        "STRENGTHEN_AUTH"
+      ],
+      "reservedTokenSupplyId": "C_TOK3"
+    },
+    {
+      "id": "SOCK_C4",
+      "routeId": "C",
+      "zoneId": "C_4",
+      "cell": [41, 21],
+      "targetSlotId": "C4",
+      "allowedActions": [
+        "ADD_CAMERA",
+        "ADD_LISTENING_SENSOR",
+        "PAIR_ROBOT",
+        "PATCH_OPENING",
+        "RESTRICT_CONNECTION",
+        "RESTRICT_ROBOT_PERMISSIONS"
+      ]
+    },
+    {
+      "id": "SOCK_A_gen1",
+      "routeId": "A",
+      "zoneId": "A_2",
+      "cell": [9, 3],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_A_gen2",
+      "routeId": "A",
+      "zoneId": "A_4",
+      "cell": [25, 3],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_A_gen3",
+      "routeId": "A",
+      "zoneId": "A_7",
+      "cell": [47, 3],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_B_gen1",
+      "routeId": "B",
+      "zoneId": "B_1",
+      "cell": [13, 11],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_B_gen2",
+      "routeId": "B",
+      "zoneId": "B_2",
+      "cell": [25, 11],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_B_gen3",
+      "routeId": "B",
+      "zoneId": "B_3",
+      "cell": [36, 11],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_C_gen1",
+      "routeId": "C",
+      "zoneId": "C_1",
+      "cell": [4, 21],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_C_gen2",
+      "routeId": "C",
+      "zoneId": "C_3",
+      "cell": [28, 21],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_C_gen3",
+      "routeId": "C",
+      "zoneId": "C_6",
+      "cell": [48, 20],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_DA1",
+      "routeId": "A",
+      "zoneId": "DA1_room",
+      "cell": [11, 8],
+      "decoyBranchId": "DA1",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DA2",
+      "routeId": "A",
+      "zoneId": "DA2_corr",
+      "cell": [28, 5],
+      "decoyBranchId": "DA2",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DA3",
+      "routeId": "A",
+      "zoneId": "DA3_corr",
+      "cell": [45, 6],
+      "decoyBranchId": "DA3",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DB1",
+      "routeId": "B",
+      "zoneId": "DB1_room",
+      "cell": [24, 7],
+      "decoyBranchId": "DB1",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DB2",
+      "routeId": "B",
+      "zoneId": "DB2_room",
+      "cell": [30, 15],
+      "decoyBranchId": "DB2",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DB3",
+      "routeId": "B",
+      "zoneId": "DB3_corr",
+      "cell": [44, 14],
+      "decoyBranchId": "DB3",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DC1",
+      "routeId": "C",
+      "zoneId": "DC1_room",
+      "cell": [13, 17],
+      "decoyBranchId": "DC1",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DC2",
+      "routeId": "C",
+      "zoneId": "DC2_corr",
+      "cell": [26, 23],
+      "decoyBranchId": "DC2",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_DC3",
+      "routeId": "C",
+      "zoneId": "DC3_corr",
+      "cell": [45, 18],
+      "decoyBranchId": "DC3",
+      "allowedActions": ["DEPLOY_HONEYPOT"]
+    },
+    {
+      "id": "SOCK_hub",
+      "routeId": "shared",
+      "zoneId": "hub",
+      "cell": [2, 12],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_exit",
+      "routeId": "shared",
+      "zoneId": "exit_room",
+      "cell": [49, 12],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    }
+  ]
+}

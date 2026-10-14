@@ -1,0 +1,14 @@
+{
+  "name": "undercurrent-ics",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline-playable first-person ICS training prototype",
+  "scripts": {
+    "dev": "python3 server.py",
+    "start": "python3 server.py --open"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
+}

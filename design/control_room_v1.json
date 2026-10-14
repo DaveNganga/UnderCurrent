@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "id": "control_room_v1",
+  "size": [16, 21],
+  "notes": [
+    "Shared tier-3 ending. Place with its top-left local cell [0,0] at the blueprint's finalModule.anchor.",
+    "Entrances: entA/entB (local x=0) feed the paired-patrol final approach hall; entC feeds the service tunnel that ends at the computer's service dock.",
+    "The computer cell (K) is solid. Route C's final cart rides the service tunnel and stops at the dock [13,12], adjacent to the computer.",
+    "Hall is patrolled by one paired patrol. Decoy FM_DM1 may become a honeypot terminal room; FM_DM2 is a dead end."
+  ],
+  "grid": [
+    "################",
+    "################",
+    ".....###########",
+    "####.###########",
+    "####..##########",
+    "####.##...######",
+    "####......######",
+    "##...##...######",
+    "####..####.....#",
+    "####.##.##.....#",
+    "...............#",
+    "######.###...K.#",
+    "#############.##",
+    "#############.##",
+    "#############.##",
+    "#############.##",
+    "#############.##",
+    "#############.##",
+    "..............##",
+    "################",
+    "################"
+  ],
+  "zones": [
+    {
+      "id": "FM_room",
+      "rect": [10, 8, 5, 4],
+      "routeId": "shared",
+      "tags": ["finalApproach"]
+    },
+    {
+      "id": "FM_entA",
+      "rect": [0, 2, 4, 1],
+      "routeId": "A",
+      "tags": []
+    },
+    {
+      "id": "FM_entB",
+      "rect": [0, 10, 4, 1],
+      "routeId": "B",
+      "tags": []
+    },
+    {
+      "id": "FM_hall_v",
+      "rect": [4, 2, 1, 9],
+      "routeId": "shared",
+      "tags": ["finalApproach"]
+    },
+    {
+      "id": "FM_hall_h",
+      "rect": [5, 10, 5, 1],
+      "routeId": "shared",
+      "tags": ["finalApproach"]
+    },
+    {
+      "id": "FM_tunnel_h",
+      "rect": [0, 18, 14, 1],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "FM_tunnel_v",
+      "rect": [13, 12, 1, 6],
+      "routeId": "C",
+      "tags": []
+    },
+    {
+      "id": "FM_DM1_corr",
+      "rect": [5, 6, 2, 1],
+      "routeId": "shared",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "FM_DM1_room",
+      "rect": [7, 5, 3, 3],
+      "routeId": "shared",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "FM_DM2_corr",
+      "rect": [2, 7, 2, 1],
+      "routeId": "shared",
+      "tags": ["deadEnd"]
+    },
+    {
+      "id": "FM_al_1",
+      "rect": [5, 4, 1, 1],
+      "routeId": "shared",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "FM_al_2",
+      "rect": [5, 8, 1, 1],
+      "routeId": "shared",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "FM_al_3",
+      "rect": [7, 9, 1, 1],
+      "routeId": "shared",
+      "tags": ["alcove"]
+    },
+    {
+      "id": "FM_al_4",
+      "rect": [6, 11, 1, 1],
+      "routeId": "shared",
+      "tags": ["alcove"]
+    }
+  ],
+  "entrances": {
+    "entA": {
+      "cell": [0, 2],
+      "route": "A"
+    },
+    "entB": {
+      "cell": [0, 10],
+      "route": "B"
+    },
+    "entC": {
+      "cell": [0, 18],
+      "route": "C"
+    }
+  },
+  "computer": {
+    "id": "computer",
+    "cell": [13, 11],
+    "zoneId": "FM_room",
+    "solid": true,
+    "accepts": ["CREDENTIAL", "TOKEN", "SERVICE", "ZERO_DAY"]
+  },
+  "serviceDock": {
+    "cell": [13, 12]
+  },
+  "serviceTunnel": {
+    "path": [
+      [0, 18],
+      [1, 18],
+      [2, 18],
+      [3, 18],
+      [4, 18],
+      [5, 18],
+      [6, 18],
+      [7, 18],
+      [8, 18],
+      [9, 18],
+      [10, 18],
+      [11, 18],
+      [12, 18],
+      [13, 18],
+      [13, 17],
+      [13, 16],
+      [13, 15],
+      [13, 14],
+      [13, 13],
+      [13, 12]
+    ]
+  },
+  "patrols": [
+    {
+      "id": "P_FM_hall",
+      "routeId": "shared",
+      "slotless": true,
+      "mode": "pingpong",
+      "waypoints": [[4, 4], [4, 10], [8, 10]],
+      "grantsTags": [],
+      "grantsDoorSlotIds": []
+    }
+  ],
+  "decoyBranches": [
+    {
+      "id": "FM_DM1",
+      "routeHint": "shared",
+      "zoneIds": ["FM_DM1_corr", "FM_DM1_room"],
+      "allowedTypes": ["dead_end", "honeypot_terminal"],
+      "doorCell": [5, 6],
+      "responderPathFrom": [4, 6],
+      "terminalCell": [8, 6]
+    },
+    {
+      "id": "FM_DM2",
+      "routeHint": "shared",
+      "zoneIds": ["FM_DM2_corr"],
+      "allowedTypes": ["dead_end"],
+      "doorCell": [3, 7],
+      "responderPathFrom": [4, 7]
+    }
+  ],
+  "sensors": [
+    {
+      "id": "cam_FM_room",
+      "kind": "camera",
+      "routeId": "shared",
+      "zoneId": "FM_room",
+      "cell": [14, 8],
+      "facing": "W"
+    }
+  ],
+  "sockets": [
+    {
+      "id": "SOCK_FM_hall1",
+      "routeId": "shared",
+      "zoneId": "FM_hall_v",
+      "cell": [4, 7],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_FM_hall2",
+      "routeId": "shared",
+      "zoneId": "FM_hall_h",
+      "cell": [7, 10],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_FM_room",
+      "routeId": "shared",
+      "zoneId": "FM_room",
+      "cell": [12, 9],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    },
+    {
+      "id": "SOCK_FM_tunnel",
+      "routeId": "C",
+      "zoneId": "FM_tunnel_h",
+      "cell": [7, 18],
+      "allowedActions": ["ADD_CAMERA", "ADD_LISTENING_SENSOR"]
+    }
+  ]
+}

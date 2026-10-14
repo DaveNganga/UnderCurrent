@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "tiers": {
+    "1": [
+      "t1_a",
+      "t1_b",
+      "t1_c"
+    ],
+    "2": [
+      "t2_a",
+      "t2_b",
+      "t2_c"
+    ],
+    "3": [
+      "t3_a",
+      "t3_b",
+      "t3_c"
+    ]
+  },
+  "modules": [
+    "control_room_v1"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "tickHz": 60,
+  "cellSize": 2,
+  "moveSpeed": 3.0,
+  "botSpeed": 1.0,
+  "investigateSpeed": 1.7,
+  "detectionSeconds": 3,
+  "detectionDecay": 0.75,
+  "botRange": 8.1,
+  "botHalfAngle": 35,
+  "cameraRange": 10.8,
+  "hackSeconds": 8,
+  "honeypotSeconds": 3,
+  "livesPerLevel": 3,
+  "panelStrikes": 3,
+  "strikeCooldown": 0.8,
+  "scannerPeriod": 7.2,
+  "scannerGaps": [
+    4.2,
+    3.12,
+    2.4
+  ],
+  "zeroDaysAtStart": 1,
+  "zeroDayReward": 1,
+  "botTurnSpeed": 1.8,
+  "cameraSweepPeriod": 13.571428571428573,
+  "cameraHalfAngle": 30,
+  "conveyorSpeed": 1.7,
+  "cartSpeed": 1.5
+}

@@ -1,0 +1,22 @@
+PASS: Same seed produces identical routes
+PASS: Route counts, obstacle counts and code format
+PASS: Input validation rejects empty/invalid and accepts first valid character
+PASS: Reinforced panel forces retreat
+PASS: Zero-day passes camera and consumes one resource
+PASS: Keypad shortcut is a honeypot capture
+PASS: Correct keypad code passes
+PASS: Three incorrect keypad attempts can produce retreat
+PASS: Facing a lone robot causes capture
+PASS: Fortification accumulates to route sealing threshold
+PASS: Sealed route is refused without ending session
+PASS: Three captures end level with loss
+PASS: Final computer supports zero-day and rejects three wrong codes
+PASS: Top-level progression and level-2 resource grant (mocked levels)
+PASS: Control-network success with controlled route and valid final credential
+
+15/15 checks passed.
+
+JavaScript syntax checks: 7 files passed.
+All packaged JSON files parsed successfully.
+Runtime blueprint copies match the design JSON files.
+Browser simulation construction: 10 seeded runs, 30 network-stage initializations passed; perimeter gate starts with one hit point. This does not test rendering or complete playthroughs.
