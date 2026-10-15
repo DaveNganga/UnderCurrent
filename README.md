@@ -56,12 +56,10 @@ This version expresses the central route-selection, capture, fortification, and 
 
 ## Assignment materials
 
-- [Written answers: Questions 1, 2, 4, and 5](submission/HW2%20Answers.odt), including the Shodan evidence screenshots.
-- [Analysis and Design](Analysis%20and%20Design.odt), comparing the student and AI-generated implementations.
+- [Analysis and Design](Analysis%20and%20Design.odt), comparing my and and AI-generated implementations.
 - [Design specifications and JSON layouts](design/).
 - [Browser implementation for Question 3](ics-tunnel-game/).
-- [Student text implementation](tunell.py).
-- [Gameplay recording](demo/gameplay.webm), approximately 67 seconds with an audio track. This recording shows an earlier daytime perimeter build; the current code includes the later nighttime and gameplay adjustments.
+- [my text implementation](tunell.py).
 
 The Markdown specifications record the intended design; the JSON files describe nine layouts and the shared control room. Runtime copies are in `ics-tunnel-game/public/blueprints/`. The project was developed through iterative design conversations and AI-assisted implementation and review.
 
