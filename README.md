@@ -1,8 +1,14 @@
 # UnderCurrent
 
-A red team simulation game created for Critical Infrastructure Protection Homework 2 by Dave Ng’ang’a.
+UnderCurrent is a red team simulation game created for Critical Infrastructure Protection Homework 2 by Dave Ng’ang’a. It represents the cat-and-mouse game between attackers seeking access to a network and defenders working to detect them and strengthen its defenses.
+The defender makes the first move by establishing the initial network layout. The attacker then explores its routes, discovers credentials, and attempts to reach the utility’s control computer.
 
-Explore a fictional utility network, evade patrols and cameras, discover access credentials, and reach the control computer. The defender establishes the initial layout and strengthens observed routes after captures. All attacks, credentials, and infrastructure are simulated.
+Once the attacker is caught, the defender responds by fortifying the network. Observations from the attempt guide defensive changes, such as reinforcing barriers, adding surveillance, or patching an exploited opening. These changes persist across subsequent attempts within the same level.
+The attacker learns from exploration, but must adapt to the defender’s response. This repeating cycle of probing, detection, fortification, and adaptation captures the ongoing contest between offense and defense. All attacks, credentials, and infrastructure are simulated.
+
+## Gameplay demonstration
+
+[▶ Watch the UnderCurrent gameplay video on OneDrive](https://livejohnshopkins-my.sharepoint.com/:v:/g/personal/dnganga1_jh_edu/IQCyKxK_hKraSLr1jc9W6DUwAVnoNtLd6E618ODQ1_3D-3c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0vS43G)
 
 ## Play the browser game
 
